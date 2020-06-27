@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="assets_backend" name="intl tel widget assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+
+            <link rel="stylesheet" href="/intl_tel_widget/static/lib/intl-tel-input/css/intlTelInput.css"/>
+            <link rel="stylesheet" type="text/scss" href="/intl_tel_widget/static/src/scss/phone_widget.scss"/>
+
+            <script type="text/javascript" src="/intl_tel_widget/static/lib/intl-tel-input/js/utils.js"/>
+            <script type="text/javascript" src="/intl_tel_widget/static/lib/intl-tel-input/js/intlTelInput-jquery.js"/>
+            <script type="text/javascript" src="/intl_tel_widget/static/lib/jQuery-Mask/jquery.mask.js"/>
+            <script type="text/javascript" src="/intl_tel_widget/static/src/js/phone_widget.js"/>
+
+        </xpath>
+    </template>
+
+</odoo>

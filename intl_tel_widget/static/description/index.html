@@ -1,0 +1,116 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#152fbf;">International Masked Telephone Input Widget</h2>
+        <h3 class="oe_slogan">This module adds possibilities to change phone input mask based on country.</h3>
+        <div class="text-justify oe_mt32">
+            <p class="oe_mt32 oe_mb32 text-justify">
+                It supports different types of phone numbers and automatically validates phone on save.
+            </p>
+            <p class="oe_mt32 oe_mb32 text-justify">
+                This module is based on the <a href="https://intl-tel-input.com">International Telephone Input</a> and <a href="https://igorescobar.github.io/jQuery-Mask-Plugin/">jQuery Mask Plugin</a> javascript libraries.
+            </p>
+
+        </div>
+        <div class="oe_demo oe_picture oe_screenshot">
+            <img src="banner.png">
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#152fbf;">Usage</h2>
+        <h4 class="oe_slogan">Widget Options</h4>
+        <div class="oe_span12">
+            <p class="oe_mt32 oe_mb32 text-justify">
+                Widget has following options:
+            </p>
+            <table class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Option</th>
+                        <th style="width: 10%">Type</th>
+                        <th style="width: 10%">Default</th>
+                        <th style="width: 50%">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>allow_dropdown</strong></td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Whether or not allow country dial code selection dropdown.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>exclude_country_codes</strong></td>
+                        <td>array</td>
+                        <td>[]</td>
+                        <td>List of country codes to exclude in dropdown.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>only_country_codes</strong></td>
+                        <td>array</td>
+                        <td>[]</td>
+                        <td>Display only these country codes in dropdown.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>preferred_country_codes</strong></td>
+                        <td>array</td>
+                        <td>[]</td>
+                        <td>Preferable country codes that appear top in dropdown.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>phone_number_type</strong></td>
+                        <td>string</td>
+                        <td>"MOBILE"</td>
+                        <td>One of the following <a class="reference external" href="https://github.com/google/libphonenumber/blob/master/javascript/i18n/phonenumbers/phonenumberutil.js#L913">phone number types</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>phone_number_format_type</strong></td>
+                        <td>string</td>
+                        <td>"E164"</td>
+                        <td>One of the following <a class="reference external" href="https://github.com/google/libphonenumber/blob/master/javascript/i18n/phonenumbers/phonenumberutil.js#L900">phone number formatting types</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>separate_dial_code</strong></td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Whether or not display dial code next to selected flag in dropdown.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>initial_country_code</strong></td>
+                        <td>string</td>
+                        <td>undefined</td>
+                        <td>Initialize country selection by specifying its country code.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>sync_country</strong></td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Whether or not synchronize dropdown with country field change.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>country_field</strong></td>
+                        <td>string</td>
+                        <td>"country_id"</td>
+                        <td>Many2one res.country field name to synchronize with. Works when <strong>sync_country</strong> is true.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4 class="oe_slogan">Example</h4>
+        <div class="oe_span12">
+            <p class="oe_mt32 oe_mb32 text-justify"> Example code:
+                <code>
+                    &lt;field name="phone" widget="phone_intl" options="{'only_country_codes': ['us', 'gb', 'ca', 'au'], 'country_field': 'country_id', 'separate_dial_code': True, 'initial_country_code': 'us'}"/&gt;
+                </code>
+            </p>
+        </div>
+        <div class="oe_span12">
+            <img class='oe_picture oe_screenshot' src="example.gif">
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_separator">
+</section>
