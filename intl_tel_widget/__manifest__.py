@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Masked Telephone Widget",
-    'version': '13.0.1.0.0',
+    'version': '12.0.1.0.0',
     'author': "kerd29",
     'category': 'Extra Tools',
     'website': "https://github.com/bkerdzaia/odoo_phone_intl/",
