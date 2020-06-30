@@ -5,7 +5,7 @@
         <xpath expr="." position="inside">
 
             <link rel="stylesheet" href="/intl_tel_widget/static/lib/intl-tel-input/css/intlTelInput.css"/>
-            <link rel="stylesheet" type="text/scss" href="/intl_tel_widget/static/src/scss/phone_widget.scss"/>
+            <link rel="stylesheet" type="text/less" href="/intl_tel_widget/static/src/less/phone_widget.less"/>
 
             <script type="text/javascript" src="/intl_tel_widget/static/lib/intl-tel-input/js/utils.js"/>
             <script type="text/javascript" src="/intl_tel_widget/static/lib/intl-tel-input/js/intlTelInput-jquery.js"/>

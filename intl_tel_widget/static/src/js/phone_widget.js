@@ -68,6 +68,7 @@ let FieldIntlPhone = FieldPhone.extend({
         this.phoneNumberFormat = intlTelInputUtils.numberFormat[this.phoneNumberFormatType];
         this.syncWithCountry = this.nodeOptions.sync_country;
 
+        this._unique_class_name = _.uniqueId("o_masked_input_");
         this._setCountry();
     },
 
@@ -83,7 +84,8 @@ let FieldIntlPhone = FieldPhone.extend({
         }
         this.$input = this.$('input');
         this.$input.addClass('o_input');
-        let inputAttrs = { type: 'text', autocomplete: this.attrs.autocomplete };
+        this.$input.addClass(this._unique_class_name);
+        let inputAttrs = {type: 'text', autocomplete: this.attrs.autocomplete};
         this.$input.attr(inputAttrs);
 
         this.iti = this.$input.data('plugin_intlTelInput');
@@ -129,13 +131,7 @@ let FieldIntlPhone = FieldPhone.extend({
      * @private
      */
     _getValue: function () {
-        let val = '';
-        if (this.phoneNumberFormatType === 'SAME') {
-            val = this.$input && this.$input.cleanVal();
-        } else {
-            val = this.iti && this.iti.getNumber(this.phoneNumberFormat);
-        }
-        return val;
+        return this.iti && this.iti.getNumber(this.phoneNumberFormat);
     },
 
     /**
@@ -231,8 +227,8 @@ let FieldIntlPhone = FieldPhone.extend({
     _setMasked: function () {
         let inputNumber = this._getExampleNumber();
         let inputMask = inputNumber.replace(/\d/g, '0');
-        this.$input.unmask(inputMask);
-        this.$input.mask(inputMask);
+        this.$('.' + this._unique_class_name).unmask(inputMask);
+        this.$('.' + this._unique_class_name).mask(inputMask);
     },
 
     /**
@@ -240,7 +236,7 @@ let FieldIntlPhone = FieldPhone.extend({
      */
     destroy: function () {
         if (this.mode === 'edit') {
-            this.$input.unmask();
+            this.$('.' + this._unique_class_name).unmask();
             if (this.iti) {
                 this.iti.destroy();
                 this.iti = null;
