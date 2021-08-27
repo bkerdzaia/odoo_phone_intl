@@ -13,10 +13,12 @@ International Masked Telephone Input Widget
 
 |badge1| |badge2|
 
-This module adds possibilities to change phone input mask based on country.
+This module adds possibilities to change phone input mask based on country in odoo form view and in odoo website builder.
 It supports different types of phone numbers and automatically validates phone on save.
 
 This module is based on the `International Telephone Input <https://intl-tel-input.com/>`_ and `jQuery Mask Plugin <https://igorescobar.github.io/jQuery-Mask-Plugin/>`_ javascript libraries.
+
+Ps: If you use the website builder (frontend) you need an intenet connecton.
 
 .. image:: static/description/banner.png
    :alt: main image
@@ -86,6 +88,16 @@ Example:
     <field name="phone" widget="phone_intl" options="{'only_country_codes': ['us', 'gb', 'ca', 'au'], 'country_field': 'country_id', 'separate_dial_code': True, 'initial_country_code': 'us'}"/>
     ...
 
+.. code-block:: html
+
+    ...
+    <div t-attf-class="form-group #{error.get('phone') and 'o_has_error' or ''} col-md-6" id="div_phone">
+        <label class="col-form-label" for="phone">Phone</label><br/>
+        <input type="tel" name="phone1" t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''} intl_tel_widget" t-att-value="'phone' in checkout and checkout['phone']"/>
+        <span class="phone_output" style="margin-left:20px;"> Please enter a valid number</span>
+        <input type="hidden" class="phone_value" name="phone" t-att-value="'phone' in checkout and checkout['phone']"/>
+    </div>
+    ...
 
 .. image:: static/description/example.gif
    :alt: example
