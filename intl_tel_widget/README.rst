@@ -18,10 +18,13 @@ It supports different types of phone numbers and automatically validates phone o
 
 This module is based on the `International Telephone Input <https://intl-tel-input.com/>`_ and `jQuery Mask Plugin <https://igorescobar.github.io/jQuery-Mask-Plugin/>`_ javascript libraries.
 
-Ps: If you use the website builder (frontend) you need an intenet connecton.
+Ps: If you use the website builder (frontend) you need an intenet connecton and use the 'phone' input name to get the complete phone number in your form.
 
 .. image:: static/description/banner.png
-   :alt: main image
+   :alt: form view
+
+.. image:: static/description/signup.png
+   :alt: website builder frontend
 
 Usage
 =====
@@ -92,7 +95,7 @@ Frontend (E-Commerce Address SignUp Page Example)
 .. code-block:: html
 
     ...
-    <div t-attf-class="form-group #{error.get('phone') and 'o_has_error' or ''} col-md-6" id="div_phone">
+    <div t-attf-class="form-group #{error.get('phone') and 'o_has_error' or ''}" id="div_phone">
         <label class="col-form-label" for="phone">Phone</label><br/>
         <input type="tel" name="phone1" t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''} intl_tel_widget" t-att-value="'phone' in checkout and checkout['phone']"/>
         <span class="phone_output" style="margin-left:20px;"> Please enter a valid number</span>
@@ -104,7 +107,7 @@ Frontend (Odoo SignUp Page Example)
 .. code-block:: html
 
     ...
-    <div class="form-group field-phone col-md-6">
+    <div class="form-group field-phone">
         <label for="phone">Mobile Phone</label><br/>
         <input type="tel" name="phone1" t-att-value="phone" id="phone" class="form-control form-control-sm intl_tel_widget" placeholder="e.g. 96699999999"
             required="required" t-att-readonly="'readonly' if only_passwords else None"
