@@ -1,7 +1,7 @@
 <section class="oe_container">
     <div class="oe_row oe_spaced">
         <h2 class="oe_slogan" style="color:#152fbf;">International Masked Telephone Input Widget</h2>
-        <h3 class="oe_slogan">This module adds possibilities to change phone input mask based on countryin odoo form view and in odoo website builder.</h3>
+        <h3 class="oe_slogan">This module adds possibilities to change phone input mask based on country in odoo form view and in odoo website builder.</h3>
         <div class="text-justify oe_mt32">
             <p class="oe_mt32 oe_mb32 text-justify">
                 It supports different types of phone numbers and automatically validates phone on save.
@@ -13,12 +13,12 @@
                 Ps: If you use the website builder (frontend) you need an intenet connecton and use the phone input name to get the complete phone number in your form.
             </p>
         </div>
+        <h3 class="oe_slogan">Form View (Back-end):</h3>
         <div class="oe_demo oe_picture oe_screenshot">
-            Form View (Back-end):
             <img src="banner.png">
         </div>
+        <h3 class="oe_slogan">Website Builder (Front-end):</h3>
         <div class="oe_demo oe_picture oe_screenshot">
-            Website Builder (Front-end):
             <img src="signup.png">
         </div>
     </div>
@@ -118,11 +118,11 @@
             <p class="oe_mt32 oe_mb32 text-justify"> Website Builder E-Commerce Address SignUp Page Example code (Front-end):
                 <br/>
                 <code>
-                    &lt;div t-attf-class="form-group #{error.get('phone') and 'o_has_error' or ''}" id="div_phone"&gt;
-                        &lt;label class="col-form-label" for="phone"&gt;Phone&lt;/label&gt;&lt;br/&gt;
-                        &lt;input type="tel" name="phone1" t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''} intl_tel_widget" t-att-value="'phone' in checkout and checkout['phone']"/&gt;
-                        &lt;span class="phone_output" style="margin-left:20px;"&gt; Please enter a valid number&lt;/span&gt;
-                        &lt;input type="hidden" class="phone_value" name="phone" t-att-value="'phone' in checkout and checkout['phone']"/&gt;
+                    &lt;div t-attf-class="form-group #{error.get('phone') and 'o_has_error' or ''}" id="div_phone"&gt; <br/>
+                        &lt;label class="col-form-label" for="phone"&gt;Phone&lt;/label&gt;&lt;br/&gt; <br/>
+                        &lt;input type="tel" name="phone1" t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''} intl_tel_widget" t-att-value="'phone' in checkout and checkout['phone']"/&gt; <br/>
+                        &lt;span class="phone_output" style="margin-left:20px;"&gt; Please enter a valid number&lt;/span&gt; <br/>
+                        &lt;input type="hidden" class="phone_value" name="phone" t-att-value="'phone' in checkout and checkout['phone']"/&gt; <br/>
                     &lt;/div&gt;
                 </code>
             </p>
@@ -131,13 +131,13 @@
             <p class="oe_mt32 oe_mb32 text-justify"> Website Builder SignUp Page Example code (Front-end):
                 <br/>
                 <code>
-                    &lt;div class="form-group field-phone"&gt;
-                        &lt;label for="phone"&gt;Mobile Phone&lt;/label&gt;&lt;br/&gt;
-                        &lt;input type="tel" name="phone1" t-att-value="phone" id="phone" class="form-control form-control-sm intl_tel_widget" placeholder="e.g. 96699999999"
-                            required="required" t-att-readonly="'readonly' if only_passwords else None"
-                            t-att-autofocus="'autofocus' if login and not only_passwords else None"/&gt;
-                        &lt;p class="phone_output"&gt;Please enter a valid number&lt;/p&gt;
-                        &lt;input type="hidden" class="phone_value" name="phone" value=""/&gt; 
+                    &lt;div class="form-group field-phone"&gt; <br/>
+                        &lt;label for="phone"&gt;Mobile Phone&lt;/label&gt;&lt;br/&gt; <br/>
+                        &lt;input type="tel" name="phone1" t-att-value="phone" id="phone" class="form-control form-control-sm intl_tel_widget" placeholder="e.g. 96699999999" <br/>
+                            required="required" t-att-readonly="'readonly' if only_passwords else None" <br/>
+                            t-att-autofocus="'autofocus' if login and not only_passwords else None"/&gt; <br/>
+                        &lt;p class="phone_output"&gt;Please enter a valid number&lt;/p&gt; <br/>
+                        &lt;input type="hidden" class="phone_value" name="phone" value=""/&gt;  <br/>
                     &lt;/div&gt;
                 </code>
             </p>
