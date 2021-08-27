@@ -88,6 +88,7 @@ Example:
     <field name="phone" widget="phone_intl" options="{'only_country_codes': ['us', 'gb', 'ca', 'au'], 'country_field': 'country_id', 'separate_dial_code': True, 'initial_country_code': 'us'}"/>
     ...
 
+Frontend (E-Commerce Address SignUp Page Example)
 .. code-block:: html
 
     ...
@@ -96,6 +97,20 @@ Example:
         <input type="tel" name="phone1" t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''} intl_tel_widget" t-att-value="'phone' in checkout and checkout['phone']"/>
         <span class="phone_output" style="margin-left:20px;"> Please enter a valid number</span>
         <input type="hidden" class="phone_value" name="phone" t-att-value="'phone' in checkout and checkout['phone']"/>
+    </div>
+    ...
+
+Frontend (Odoo SignUp Page Example)
+.. code-block:: html
+
+    ...
+    <div class="form-group field-phone col-md-6">
+        <label for="phone">Mobile Phone</label><br/>
+        <input type="tel" name="phone1" t-att-value="phone" id="phone" class="form-control form-control-sm intl_tel_widget" placeholder="e.g. 96699999999"
+            required="required" t-att-readonly="'readonly' if only_passwords else None"
+            t-att-autofocus="'autofocus' if login and not only_passwords else None"/>
+        <p class="phone_output">Please enter a valid number</p>
+        <input type="hidden" class="phone_value" name="phone" value=""/> 
     </div>
     ...
 
