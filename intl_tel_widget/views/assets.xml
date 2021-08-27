@@ -20,8 +20,8 @@
 
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/css/intlTelInput.css"/>
 
+            <script type="text/javascript" src="/intl_tel_widget/static/src/js/phone_widget_frontend.js"/>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/intlTelInput.js"/>
-            <script type="text/javascript" src="/intl_tel_widget/static/src/js/phone_widget_pure.js"/>
 
         </xpath>
     </template>
