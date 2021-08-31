@@ -23,8 +23,11 @@ let CountryService = Class.extend({
             args: [[], ['id', 'code']],
         }).then(function (result) {
             result.forEach(function (item) {
-                self.countries[item.id] = item.code.toLowerCase();
-                self.codes[item.code.toLowerCase()] = item.id;
+                if(item.code){
+                    let country_code = item.code.toLowerCase();
+                    self.countries[item.id] = country_code;
+                    self.codes[country_code] = item.id;
+                }
             });
         });
     },
